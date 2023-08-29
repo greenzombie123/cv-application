@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import TopInfoSection from './components/TopInfoSection/TopInfoSection'
 import "./App.css"
 
