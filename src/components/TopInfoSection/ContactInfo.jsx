@@ -5,26 +5,21 @@ function onPhoneNumberChange(){
     
 }
 
-function ContactInfo({ phoneNumber, email, address, socialMedia, onChange, contactInfo }) {
-
-    function onPhoneNumberChange(e){
-        const number = e.target.value
-        onChange({...contactInfo, phoneNumber:number})
-    }    
+function ContactInfo({ phoneNumber, email, address, socialMedia, onChange}) {
 
   return (
     <ul className="contactInfo">
       <li>
-        <Input type="tel" value={phoneNumber} placeholder='Enter your phone number' pattern={"[0-9]{3}-[0-9]{3}-[0-9]{4}"} onChange={onPhoneNumberChange}/>
+        <Input id="phonenumber" type="tel" value={phoneNumber} placeholder='Enter your phone number' pattern={"[0-9]{3}-[0-9]{3}-[0-9]{4}"} onChange={onChange}/>
       </li>
       <li>
-        <Input type="email" value={email} placeholder="Enter your email address"/>
+        <Input id="email "type="email" value={email} placeholder="Enter your email address"/>
       </li>
       <li>
-        <Input value={address}/>
+        <Input id="address" value={address}/>
       </li>
       <li>
-        <Input value={socialMedia}/>
+        <Input id="socialmedia" value={socialMedia}/>
       </li>
     </ul>
   );

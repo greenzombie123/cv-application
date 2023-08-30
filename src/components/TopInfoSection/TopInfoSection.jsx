@@ -11,8 +11,10 @@ function TopInfoSection() {
         setName(e.target.value)
     }
 
-    function onContactInfoChange(newState){
-        setContactInfo(newState)
+    function onContactInfoChange(e){
+        const value = e.target.value
+        const id = e.target.id
+        if(id === "phonenumber")setContactInfo({...contactInfo, phoneNumber:value})
     }
     
     //let name = "Alvin Hart"
@@ -21,7 +23,7 @@ function TopInfoSection() {
     return (
         <div className="top">
            <Name name={name} onChange={onNameChange}/> 
-           <ContactInfo {...contactInfo} onChange={onContactInfoChange} contactInfo={contactInfo}/>
+           <ContactInfo {...contactInfo} onChange={onContactInfoChange}/>
         </div>
     )
 }
