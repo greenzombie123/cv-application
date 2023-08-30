@@ -1,10 +1,10 @@
 import Input from "../UtilityComponents/Input"
 import "../css/Name.css"
 
-function Name({name}){
+function Name({name, onChange}){
     return (
         <div className="name">
-            <Input value={name}/>
+            <Input value={name} onChange={onChange}/>
         </div>
     )
 }
