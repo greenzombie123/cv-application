@@ -13,7 +13,7 @@ function ContactInfo({
     <ul className="contactInfo">
       <li>
         {hasSubmit ? (
-          <p>{phoneNumber}</p>
+          phoneNumber ? <p>{phoneNumber}</p> : <p>Enter your number</p> 
         ) : (
           <Input
             id="phonenumber"
@@ -27,7 +27,7 @@ function ContactInfo({
       </li>
       <li>
         {hasSubmit ? (
-          <p>{email}</p>
+         email ? <p>{email}</p> : <p>Enter your email address</p> 
         ) : (
           <Input
             id="email"
@@ -40,14 +40,14 @@ function ContactInfo({
       </li>
       <li>
         {hasSubmit ? (
-          <p>{address}</p>
+          address ? <p>{address}</p> : <p>Enter your address</p> 
         ) : (
           <Input id="address" value={address} onChange={onChange} />
         )}
       </li>
       <li>
         {hasSubmit ? (
-          <p>{socialMedia}</p>
+          socialMedia ? <p>{socialMedia}</p> : <p>Enter your social media</p> 
         ) : (
           <Input id="socialmedia" value={socialMedia} onChange={onChange} />
         )}
