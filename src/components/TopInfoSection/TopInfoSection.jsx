@@ -15,6 +15,9 @@ function TopInfoSection() {
         const value = e.target.value
         const id = e.target.id
         if(id === "phonenumber")setContactInfo({...contactInfo, phoneNumber:value})
+        if(id === "address")setContactInfo({...contactInfo, address:value})
+        if(id === "email")setContactInfo({...contactInfo, email:value})
+        if(id === "socialmedia")setContactInfo({...contactInfo, socialMedia:value})
     }
     
     //let name = "Alvin Hart"
