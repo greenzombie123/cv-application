@@ -1,11 +1,14 @@
 import TopInfoSection from './components/TopInfoSection/TopInfoSection'
 import "./App.css"
+import { useState } from 'react'
 
 function App() {
+  const [hasSubmit, setHasSubmit] = useState(true)
 
   return (
     <div className='App'>
-      <TopInfoSection/>
+      const
+      <TopInfoSection hasSubmit={hasSubmit}/>
     </div>
   )
 }
