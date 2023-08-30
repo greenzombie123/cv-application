@@ -4,10 +4,11 @@ import Name from "./Name";
 
 function TopInfoSection() {
     let name = "Alvin Hart"
+    let contactInfo = {phoneNumber:1231321, email:"ggg@", socialMedia:"ggg.twitter", address:"Phoenix, AZ"}
     return (
         <div className="top">
            <Name name={name}/> 
-           <ContactInfo/>
+           <ContactInfo {...contactInfo}/>
         </div>
     )
 }

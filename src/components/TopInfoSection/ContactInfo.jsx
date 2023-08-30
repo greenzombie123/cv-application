@@ -5,7 +5,7 @@ function ContactInfo({ phoneNumber, email, address, socialMedia }) {
   return (
     <ul className="contactInfo">
       <li>
-        <Input />
+        <Input type="tel" value={phoneNumber} placeholder='Enter your phone number' pattern={"[0-9]{3}-[0-9]{3}-[0-9]{4}"}/>
       </li>
       <li>
         <Input />

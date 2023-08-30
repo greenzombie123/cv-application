@@ -1,6 +1,6 @@
-function Input({value, className, becameText, type = "text"}){
+function Input({value, className, becameText, type = "text", placeholder = null, pattern=null}){
     return(
-        <input type={type} className={className} value={value}/>
+        <input type={type} className={className} value={value} placeholder={placeholder} pattern={pattern}/>
     )
 }
 
