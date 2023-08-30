@@ -1,4 +1,5 @@
 import "../css/Top.css"
+import ContactInfo from "./ContactInfo";
 import Name from "./Name";
 
 function TopInfoSection() {
@@ -6,6 +7,7 @@ function TopInfoSection() {
     return (
         <div className="top">
            <Name name={name}/> 
+           <ContactInfo/>
         </div>
     )
 }
