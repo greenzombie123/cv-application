@@ -3,7 +3,29 @@
     height: 100%;
 } */
 
-.App{
-    margin: 0 auto;
-    width: 50%;
+.App {
+  display: grid;
+  grid-template-columns: 3fr 6fr;
+  grid-template-rows: 100px 300px;
+  grid-template-areas:
+    "top top"
+    "side main";
+  margin: 0 auto;
+  width: 50%;
+  border: 5px solid green;
+}
+
+.top {
+  grid-area: top;
+  border: 1px solid black;
+}
+
+.sideInfoSection {
+  grid-area: side;
+  border: 1px solid black;
+}
+
+.mainInfoSection {
+  grid-area: main;
+  border: 1px solid black;
 }

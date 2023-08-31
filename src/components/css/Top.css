@@ -1,6 +1,6 @@
 .top{
     display: flex;
     flex-flow: row nowrap;
-    height: 100px;
+    /* height: 100px; */
     border: 1px black solid;
 }
