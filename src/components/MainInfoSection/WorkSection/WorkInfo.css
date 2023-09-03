@@ -1,4 +1,10 @@
 .workInfo{
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
+}
+
+.workInfo > .deleteButton{
+    position: absolute;
+    left: 90%;
 }
