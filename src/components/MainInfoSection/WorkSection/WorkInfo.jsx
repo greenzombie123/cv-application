@@ -1,9 +1,10 @@
 import './WorkInfo.css'
 import TimeLength from '../../UtilityComponents/TimeLength'
 import Input from "../../UtilityComponents/Input"
+import WorkAchievementList from './WorkAchievementList'
 
-function WorkInfo({hasSubmit, company, position, onChange, startTime, endTime}){
-    return(
+function WorkInfo({company, position, onChange, startTime, endTime, workAchievementList, hasSubmit }){
+  return(
         <li className="workInfo">
           <Input
             id="company"
@@ -18,6 +19,7 @@ function WorkInfo({hasSubmit, company, position, onChange, startTime, endTime}){
             onChange={onChange}
           /> 
           <TimeLength startTime={startTime} endTime={endTime}/>
+          <WorkAchievementList workAchievementList={workAchievementList}/>
         </li>
     )
 }

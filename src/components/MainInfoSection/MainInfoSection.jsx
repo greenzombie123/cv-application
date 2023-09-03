@@ -1,12 +1,14 @@
-import "./MainInfoSection.css"
-import WorkSection from "./WorkSection/WorkSection"
+import "./MainInfoSection.css";
+import WorkSection from "./WorkSection/WorkSection";
+import { workInfoList } from "../../cvinfo";
 
-function MainInfoSection({hasSubmit}){
-    return(
-        <div className="mainInfoSection">
-            <WorkSection/>
-        </div>
-    )
+function MainInfoSection({ hasSubmit}) {
+
+  return (
+    <div className="mainInfoSection">
+      <WorkSection workInfoList = {workInfoList}/>
+    </div>
+  );
 }
 
-export default MainInfoSection
+export default MainInfoSection;

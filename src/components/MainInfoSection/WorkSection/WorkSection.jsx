@@ -1,10 +1,12 @@
 import WorkInfo from './WorkInfo'
 import './WorkSection.css'
 
-function WorkSection({hasSubmit}){
+function WorkSection({hasSubmit, workInfoList}){
     return(
         <ul className='workSection'>
-            <WorkInfo startTime={"2018-07-22"} endTime={"2018-10-22"}/>
+            {workInfoList.map(workInfo => {
+                return (<WorkInfo key={workInfo.id} {...workInfo}/>)
+            })}
         </ul>
     )
 }
