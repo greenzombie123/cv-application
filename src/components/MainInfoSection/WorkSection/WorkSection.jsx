@@ -35,6 +35,7 @@ function WorkSection({ hasSubmit }) {
               id="position"
               value={workInfo.position}
               placeholder="Position"
+              onChange={onInputChange(workInfo.id, "position")}
             />
             <TimeLength
               startTime={workInfo.startTime}
