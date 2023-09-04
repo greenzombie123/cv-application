@@ -40,6 +40,8 @@ function WorkSection({ hasSubmit }) {
             <TimeLength
               startTime={workInfo.startTime}
               endTime={workInfo.endTime}
+              onStartTimeChange={onInputChange(workInfo.id, "startTime")}
+              onEndTimeChange={onInputChange(workInfo.id, "endTime")}
             />
             <WorkAchievementList
               workAchievementList={workInfo.workAchievementList}
