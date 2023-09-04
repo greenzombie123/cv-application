@@ -6,7 +6,7 @@ function MainInfoSection({ hasSubmit}) {
 
   return (
     <div className="mainInfoSection">
-      <WorkSection workInfoList = {workInfoList}/>
+      <WorkSection/>
     </div>
   );
 }

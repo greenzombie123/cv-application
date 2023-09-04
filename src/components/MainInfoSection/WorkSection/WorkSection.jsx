@@ -3,9 +3,13 @@ import TimeLength from "../../UtilityComponents/TimeLength";
 import Input from "../../UtilityComponents/Input";
 import WorkAchievementList from "./WorkAchievementList";
 import DeleteButton from "../../UtilityComponents/DeleteButton";
+import { workInfoList as Info} from "../../../cvinfo";
 import "./WorkSection.css";
+import { useState } from "react";
 
-function WorkSection({ hasSubmit, workInfoList }) {
+function WorkSection({ hasSubmit}) {
+  const [workInfoList, setWorkInfoList] = useState(Info)
+
   return (
     <ul className="workSection">
       {workInfoList.map((workInfo) => {
