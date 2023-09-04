@@ -3,12 +3,21 @@ import TimeLength from "../../UtilityComponents/TimeLength";
 import Input from "../../UtilityComponents/Input";
 import WorkAchievementList from "./WorkAchievementList";
 import DeleteButton from "../../UtilityComponents/DeleteButton";
-import { workInfoList as Info} from "../../../cvinfo";
+import { workInfoList as Info } from "../../../cvinfo";
 import "./WorkSection.css";
 import { useState } from "react";
 
-function WorkSection({ hasSubmit}) {
-  const [workInfoList, setWorkInfoList] = useState(Info)
+function WorkSection({ hasSubmit }) {
+  const [workInfoList, setWorkInfoList] = useState(Info);
+
+  function onInputChange(id, propName) {
+    return (e) => {
+      const listCopy = [...workInfoList];
+      const workInfoCopy = listCopy.find((wi) => wi.id === id);
+      workInfoCopy[propName] = e.target.value;
+      setWorkInfoList(listCopy);
+    };
+  }
 
   return (
     <ul className="workSection">
@@ -20,14 +29,20 @@ function WorkSection({ hasSubmit}) {
               id="company"
               value={workInfo.company}
               placeholder="Company Name"
+              onChange={onInputChange(workInfo.id, "company")}
             />
             <Input
               id="position"
               value={workInfo.position}
               placeholder="Position"
             />
-            <TimeLength startTime={workInfo.startTime} endTime={workInfo.endTime} />
-            <WorkAchievementList workAchievementList={workInfo.workAchievementList} />
+            <TimeLength
+              startTime={workInfo.startTime}
+              endTime={workInfo.endTime}
+            />
+            <WorkAchievementList
+              workAchievementList={workInfo.workAchievementList}
+            />
           </WorkInfo>
         );
       })}
