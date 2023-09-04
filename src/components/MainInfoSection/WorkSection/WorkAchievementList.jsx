@@ -1,17 +1,23 @@
-import DeleteButton from "../../UtilityComponents/DeleteButton"
-import './WorkAchievementList.css'
+import DeleteButton from "../../UtilityComponents/DeleteButton";
+import Input from "../../UtilityComponents/Input";
+import "./WorkAchievementList.css";
 
-function WorkAchievementList({workAchievementList}){
-     
-    return (
-        <ul className="workAchievementList">
-            {
-                workAchievementList.map(workAchievement => <li className="workAchievement" key={workAchievement.id}>
-                    {workAchievement.text} <DeleteButton/>
-                </li>)
-            }
-        </ul>
-     )
+function WorkAchievementList({ workAchievementList, onChange }) {
+  return (
+    <ul className="workAchievementList">
+      {workAchievementList.map((workAchievement) => (
+        <li className="workAchievement" key={workAchievement.id}>
+          <Input
+            id={workAchievement.id}
+            value={workAchievement.text}
+            placeholder="Achievement"
+            onChange={onChange(workAchievement.id)}
+          />{" "}
+          <DeleteButton />
+        </li>
+      ))}
+    </ul>
+  );
 }
 
-export default WorkAchievementList
+export default WorkAchievementList;
