@@ -34,6 +34,16 @@ function WorkSection({ hasSubmit }) {
     };
   }
 
+  function onAddAchievementClick(id){
+    return () => {
+      const listCopy = [...workInfoList];
+      const workInfoCopy = listCopy.find((wi) => wi.id === id);
+      const newId = workInfoCopy.workAchievementList.length + 1
+      workInfoCopy.workAchievementList.push({id:newId, text:""})
+      setWorkInfoList(listCopy)
+    };
+  }
+
   return (
     <ul className="workSection">
       {workInfoList.map((workInfo) => {
@@ -61,6 +71,7 @@ function WorkSection({ hasSubmit }) {
             <WorkAchievementList
               workAchievementList={workInfo.workAchievementList}
               onChange={onAchievementChange(workInfo.id)}
+              onAddAchievementClick={onAddAchievementClick(workInfo.id)}
             />
           </WorkInfo>
         );

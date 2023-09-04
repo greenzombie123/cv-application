@@ -1,8 +1,9 @@
+import AddButton from "../../UtilityComponents/AddButton";
 import DeleteButton from "../../UtilityComponents/DeleteButton";
 import Input from "../../UtilityComponents/Input";
 import "./WorkAchievementList.css";
 
-function WorkAchievementList({ workAchievementList, onChange }) {
+function WorkAchievementList({ workAchievementList, onChange, onAddAchievementClick }) {
   return (
     <ul className="workAchievementList">
       {workAchievementList.map((workAchievement) => (
@@ -16,6 +17,7 @@ function WorkAchievementList({ workAchievementList, onChange }) {
           <DeleteButton />
         </li>
       ))}
+      <AddButton text="Add Achievement" onClick={onAddAchievementClick}/>
     </ul>
   );
 }
