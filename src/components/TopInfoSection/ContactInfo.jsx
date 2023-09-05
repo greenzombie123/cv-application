@@ -1,19 +1,21 @@
 import Input from "../UtilityComponents/Input";
 import "../css/ContactInfo.css";
+import { useContext } from "react";
+import { useHasSubmit } from "../../hasSubmitContext";
 
-function ContactInfo({
-  phoneNumber,
-  email,
-  address,
-  socialMedia,
-  onChange,
-  hasSubmit,
-}) {
+function ContactInfo({ phoneNumber, email, address, socialMedia, onChange }) {
+  const {HasSubmitContext} = useHasSubmit()
+    const hasSubmit = useContext(HasSubmitContext)
+  
   return (
     <ul className="contactInfo">
       <li>
         {hasSubmit ? (
-          phoneNumber ? <p>{phoneNumber}</p> : <p>Enter your number</p> 
+          phoneNumber ? (
+            <p>{phoneNumber}</p>
+          ) : (
+            <p>Enter your number</p>
+          )
         ) : (
           <Input
             id="phonenumber"
@@ -27,7 +29,11 @@ function ContactInfo({
       </li>
       <li>
         {hasSubmit ? (
-         email ? <p>{email}</p> : <p>Enter your email address</p> 
+          email ? (
+            <p>{email}</p>
+          ) : (
+            <p>Enter your email address</p>
+          )
         ) : (
           <Input
             id="email"
@@ -40,14 +46,22 @@ function ContactInfo({
       </li>
       <li>
         {hasSubmit ? (
-          address ? <p>{address}</p> : <p>Enter your address</p> 
+          address ? (
+            <p>{address}</p>
+          ) : (
+            <p>Enter your address</p>
+          )
         ) : (
           <Input id="address" value={address} onChange={onChange} />
         )}
       </li>
       <li>
         {hasSubmit ? (
-          socialMedia ? <p>{socialMedia}</p> : <p>Enter your social media</p> 
+          socialMedia ? (
+            <p>{socialMedia}</p>
+          ) : (
+            <p>Enter your social media</p>
+          )
         ) : (
           <Input id="socialmedia" value={socialMedia} onChange={onChange} />
         )}

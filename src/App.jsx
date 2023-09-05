@@ -1,19 +1,21 @@
-import TopInfoSection from './components/TopInfoSection/TopInfoSection'
-import "./App.css"
-import { useState } from 'react'
-import SideInfoSection from './components/SideInfoSection/SideInfoSection'
-import MainInfoSection from './components/MainInfoSection/MainInfoSection'
+import TopInfoSection from "./components/TopInfoSection/TopInfoSection";
+import "./App.css";
+import { useHasSubmit } from "./hasSubmitContext";
+import SideInfoSection from "./components/SideInfoSection/SideInfoSection";
+import MainInfoSection from "./components/MainInfoSection/MainInfoSection";
 
 function App() {
-  const [hasSubmit, setHasSubmit] = useState(false)
+  const {hasSubmit, setHasSubmit, HasSubmitContext} = useHasSubmit()
 
   return (
-    <div className='App'>
-      <TopInfoSection hasSubmit={hasSubmit}/>
-      <SideInfoSection hasSubmit={hasSubmit}/>
-      <MainInfoSection hasSubmit={hasSubmit}/>
+    <div className="App">
+      <HasSubmitContext.Provider value={hasSubmit}>
+        <TopInfoSection hasSubmit={hasSubmit} />
+        <SideInfoSection hasSubmit={hasSubmit} />
+        <MainInfoSection hasSubmit={hasSubmit} />
+      </HasSubmitContext.Provider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

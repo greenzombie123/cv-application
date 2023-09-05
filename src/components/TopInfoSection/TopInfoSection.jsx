@@ -3,7 +3,7 @@ import "../css/Top.css"
 import ContactInfo from "./ContactInfo";
 import Name from "./Name";
 
-function TopInfoSection({hasSubmit}) {
+function TopInfoSection() {
     const [name, setName] = useState("Alvin Hart")
     const [contactInfo, setContactInfo] = useState({phoneNumber:1231321, email:"ggg@hhh", socialMedia:"ggg.twitter", address:"Phoenix, AZ"}) 
     
@@ -22,8 +22,8 @@ function TopInfoSection({hasSubmit}) {
 
     return (
         <div className="top">
-           <Name name={name} onChange={onNameChange} hasSubmit={hasSubmit}/> 
-           <ContactInfo {...contactInfo} onChange={onContactInfoChange} hasSubmit={hasSubmit}/>
+           <Name name={name} onChange={onNameChange}/> 
+           <ContactInfo {...contactInfo} onChange={onContactInfoChange}/>
         </div>
     )
 }
