@@ -1,10 +1,9 @@
-function g(x, y, z){
-    return z
-}
+const b = () => {
+  ({
+    a: 2,
+  });
+};
 
-const k = {a:1, b:true}
-const v = [1,2,3]
-
-let j = g(...v)
-
-j
+const h = () => {
+  const { a } = b();
+};
