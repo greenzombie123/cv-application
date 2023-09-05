@@ -23,7 +23,7 @@ function WorkSection({ hasSubmit }) {
       {workInfoList.map((workInfo) => {
         return (
           <WorkInfo key={workInfo.id}>
-            {workInfoList.length > 1 && <DeleteButton/>}
+            {workInfoList.length > 1 && <DeleteButton onDeleteButtonClick={deleteWorkInfo(workInfo.id)}/>}
             <Input
               id="company"
               value={workInfo.company}
