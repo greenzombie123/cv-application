@@ -52,11 +52,35 @@ export const useWorkInfoList = () => {
       };
     };
   }
+
+    function deleteWorkInfo(id) {
+      return () => {
+        const listCopy = [...workInfoList];
+        const newListCopy = listCopy.filter((wi) => wi.id !== id);
+        setWorkInfoList(newListCopy);
+      };
+    }
+
+    function addNewWorkInfo() {
+      const listCopy = [...workInfoList];
+      listCopy.push({
+        id: listCopy.length + 1,
+        startTime: null,
+        endTime: null,
+        company: null,
+        position: null,
+        workAchievementList: []
+      });
+      setWorkInfoList(listCopy)
+    }
+  
   return {
     onAchievementChange,
     onAddAchievementClick,
     onInputChange,
     deleteAchievement,
+    addNewWorkInfo,
+    deleteWorkInfo,
     workInfoList,
   };
 };

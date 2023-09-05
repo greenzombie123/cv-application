@@ -3,13 +3,20 @@ import TimeLength from "../../UtilityComponents/TimeLength";
 import Input from "../../UtilityComponents/Input";
 import WorkAchievementList from "./WorkAchievementList";
 import DeleteButton from "../../UtilityComponents/DeleteButton";
-// import { workInfoList as Info } from "../../../cvinfo";
 import "./WorkSection.css";
-// import { useState } from "react";
 import { useWorkInfoList } from "./UseWorkInfo";
+import AddButton from "../../UtilityComponents/AddButton";
 
 function WorkSection({ hasSubmit }) {
-  const {onAchievementChange, onAddAchievementClick, onInputChange, workInfoList, deleteAchievement} = useWorkInfoList()
+  const {
+    onAchievementChange,
+    onAddAchievementClick,
+    onInputChange,
+    workInfoList,
+    deleteAchievement,
+    deleteWorkInfo,
+    addNewWorkInfo,
+  } = useWorkInfoList();
 
   return (
     <ul className="workSection">
@@ -44,6 +51,9 @@ function WorkSection({ hasSubmit }) {
           </WorkInfo>
         );
       })}
+      <li>
+        <AddButton onClick={addNewWorkInfo}/>
+      </li>
     </ul>
   );
 }
