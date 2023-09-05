@@ -3,7 +3,7 @@ import DeleteButton from "../../UtilityComponents/DeleteButton";
 import Input from "../../UtilityComponents/Input";
 import "./WorkAchievementList.css";
 
-function WorkAchievementList({ workAchievementList, onChange, onAddAchievementClick }) {
+function WorkAchievementList({ workAchievementList, onChange, onAddAchievementClick, onDeleteButtonClick }) {
   return (
     <ul className="workAchievementList">
       {workAchievementList.map((workAchievement) => (
@@ -14,7 +14,7 @@ function WorkAchievementList({ workAchievementList, onChange, onAddAchievementCl
             placeholder="Achievement"
             onChange={onChange(workAchievement.id)}
           />{" "}
-          <DeleteButton />
+          <DeleteButton onDeleteButtonClick={onDeleteButtonClick(workAchievement.id)}/>
         </li>
       ))}
       <AddButton text="Add Achievement" onClick={onAddAchievementClick}/>

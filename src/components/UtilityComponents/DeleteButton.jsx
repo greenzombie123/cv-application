@@ -1,8 +1,8 @@
 import "./DeleteButton.css"
 
-function DeleteButton({onClick}){
+function DeleteButton({onDeleteButtonClick}){
     return (
-        <button className="deleteButton">x</button>
+        <button onClick={onDeleteButtonClick} className="deleteButton">x</button>
     )
 }
 

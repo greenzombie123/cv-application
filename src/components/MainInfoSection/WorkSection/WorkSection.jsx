@@ -6,47 +6,10 @@ import DeleteButton from "../../UtilityComponents/DeleteButton";
 // import { workInfoList as Info } from "../../../cvinfo";
 import "./WorkSection.css";
 // import { useState } from "react";
-import { useWorkInfo } from "./UseWorkInfo";
+import { useWorkInfoList } from "./UseWorkInfo";
 
 function WorkSection({ hasSubmit }) {
-  const {onAchievementChange, onAddAchievementClick, onInputChange, workInfoList} = useWorkInfo()
-  // const [workInfoList, setWorkInfoList] = useState(Info);
-
-
-
-  // function onInputChange(id, propName) {
-  //   return (e) => {
-  //     const listCopy = [...workInfoList];
-  //     const workInfoCopy = listCopy.find((wi) => wi.id === id);
-  //     workInfoCopy[propName] = e.target.value;
-  //     setWorkInfoList(listCopy);
-  //   };
-  // }
-
-  // function onAchievementChange(workInfoId) {
-  //   return (achievementId) => {
-  //     const listCopy = [...workInfoList];
-  //     const workInfoCopy = listCopy.find((wi) => wi.id === workInfoId);
-  //     const achievementListCopy = workInfoCopy.workAchievementList;
-  //     return (e) => {
-  //       const achievement = achievementListCopy.find(
-  //         (a) => a.id === achievementId
-  //       );
-  //       achievement.text = e.target.value;
-  //       setWorkInfoList(listCopy);
-  //     };
-  //   };
-  // }
-
-  // function onAddAchievementClick(id){
-  //   return () => {
-  //     const listCopy = [...workInfoList];
-  //     const workInfoCopy = listCopy.find((wi) => wi.id === id);
-  //     const newId = workInfoCopy.workAchievementList.length + 1
-  //     workInfoCopy.workAchievementList.push({id:newId, text:""})
-  //     setWorkInfoList(listCopy)
-  //   };
-  // }
+  const {onAchievementChange, onAddAchievementClick, onInputChange, workInfoList, deleteAchievement} = useWorkInfoList()
 
   return (
     <ul className="workSection">
@@ -76,6 +39,7 @@ function WorkSection({ hasSubmit }) {
               workAchievementList={workInfo.workAchievementList}
               onChange={onAchievementChange(workInfo.id)}
               onAddAchievementClick={onAddAchievementClick(workInfo.id)}
+              onDeleteButtonClick={deleteAchievement(workInfo.id)}
             />
           </WorkInfo>
         );
