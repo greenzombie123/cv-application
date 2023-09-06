@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { useHasSubmit } from "../../../hasSubmitContext";
+import { objectiveInfo } from "../../../ObjectiveInfo";
 
 function CareerObjectiveSection() {
-  const [objective, setObjective] = useState("");
+  const [objective, setObjective] = useState(objectiveInfo);
   const { HasSubmitContext } = useHasSubmit();
   const hasSubmit = useContext(HasSubmitContext);
 
@@ -18,7 +19,7 @@ function CareerObjectiveSection() {
       {hasSubmit ? (
         <p>{objective}</p>
       ) : (
-        <input onChange={onInputChange} placeholder="Enter your objective"></input>
+        <textarea onChange={onInputChange} placeholder="Enter your objective" value={objective} cols={60} rows={4}/>
       )}
     </div>
   );
