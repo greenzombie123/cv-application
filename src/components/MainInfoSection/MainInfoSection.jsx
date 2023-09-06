@@ -1,12 +1,12 @@
 import "./MainInfoSection.css";
 import WorkSection from "./WorkSection/WorkSection";
-import { workInfoList } from "../../cvinfo";
+import CareerObjectiveSection from "./CareerObjective/CareerObjective.jsx";
 
-function MainInfoSection({ hasSubmit}) {
-
+function MainInfoSection() {
   return (
     <div className="mainInfoSection">
-      <WorkSection/>
+      <CareerObjectiveSection />
+      <WorkSection />
     </div>
   );
 }

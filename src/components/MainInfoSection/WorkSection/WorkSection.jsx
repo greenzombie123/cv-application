@@ -39,7 +39,6 @@ function WorkSection() {
           </li>
         ))}
       </ul>
-      // <>3</>
     );
   } else
     return (
