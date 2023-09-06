@@ -1,11 +1,13 @@
 .academicSection_container{
-    position: relative;
+    
 }
 
-.academicSection_container > .deleteButton{
+.schoolInfo > .deleteButton{
     position: absolute;
+    right: 0;
 }
 
 .academicSection_list{
+    position: relative;
     list-style-type:none;
 }

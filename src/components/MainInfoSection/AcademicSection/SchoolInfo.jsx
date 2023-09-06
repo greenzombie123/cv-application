@@ -1,52 +1,50 @@
 import TimeLength from "../../UtilityComponents/TimeLength";
+import { useContext } from "react";
+import { useHasSubmit } from "../../../hasSubmitContext";
 
-function SchoolInfo({ school, degree, startTime, endTime, onInputChange, onDeleleButtonClick }) {
-  const hasSubmit = false;
-  // return(
-  //     if (hasSubmit) {
-  //         return (
-  //           <>
-  //             <h1>Work Experience</h1>
-  //             <ul className="workSection">
-  //               {workInfoList.map((workInfo) => (
-  //                 <li key={workInfo.id}>
-  //                   <p>{workInfo.company}</p>
-  //                   <p>{workInfo.position}</p>
-  //                   <p>{workInfo.startTime + "-" + workInfo.endTime}</p>
-  //                   <ul>
-  //                     {workInfo.workAchievementList.map((WorkAchievement) => (
-  //                       <li key={WorkAchievement.id}>{WorkAchievement.text}</li>
-  //                     ))}
-  //                   </ul>
-  //                 </li>
-  //               ))}
-  //             </ul>
-  //           </>
-  //         );
-  //       } else
-  return (
-    <li className="schoolInfo">
-      <button className="deleteButton" onClick={onDeleleButtonClick}>
-        x
-      </button>
-      <input
-        value={school}
-        placeholder="School Name"
-        onChange={onInputChange("school")}
-      />
-      <input
-        value={degree}
-        placeholder="Degree"
-        onChange={onInputChange("degree")}
-      />
-      <TimeLength
-        startTime={startTime}
-        endTime={endTime}
-        onStartTimeChange={onInputChange("startTime")}
-        onEndTimeChange={onInputChange("endTime")}
-      />
-    </li>
-  );
+function SchoolInfo({
+  school,
+  degree,
+  startTime,
+  endTime,
+  onInputChange,
+  onDeleleButtonClick,
+}) {
+  const {HasSubmitContext} = useHasSubmit()
+  const hasSubmit = useContext(HasSubmitContext)
+
+  if (hasSubmit) {
+    return (
+      <li className="schoolInfo">
+        <p>{school}</p>
+        <p>{degree}</p>
+        <p>{startTime + "-" + endTime}</p>
+      </li>
+    );
+  } else
+    return (
+      <li className="schoolInfo">
+        <button className="deleteButton" onClick={onDeleleButtonClick}>
+          x
+        </button>
+        <input
+          value={school}
+          placeholder="School Name"
+          onChange={onInputChange("school")}
+        />
+        <input
+          value={degree}
+          placeholder="Degree"
+          onChange={onInputChange("degree")}
+        />
+        <TimeLength
+          startTime={startTime}
+          endTime={endTime}
+          onStartTimeChange={onInputChange("startTime")}
+          onEndTimeChange={onInputChange("endTime")}
+        />
+      </li>
+    );
 }
 
 export default SchoolInfo;
