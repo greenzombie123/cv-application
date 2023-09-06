@@ -38,7 +38,7 @@ export const useSchoolInfoList = () => {
     };
   }
 
-    function deleteSchoolWorkInfo(id) {
+    function deleteSchoolInfo(id) {
       return () => {
         const listCopy = [...workInfoList];
         const newListCopy = listCopy.filter((wi) => wi.id !== id);
@@ -60,12 +60,11 @@ export const useSchoolInfoList = () => {
     }
   
   return {
-    onAchievementChange,
     onAddAchievementClick,
     onInputChange,
     deleteAchievement,
-    addNewWorkInfo,
-    deleteWorkInfo,
-    workInfoList,
+    addNewSchoolInfo,
+    deleteSchoolInfo,
+    schoolInfoList,
   };
 };
