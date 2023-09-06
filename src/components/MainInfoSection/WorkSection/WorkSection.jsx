@@ -25,63 +25,69 @@ function WorkSection() {
 
   if (hasSubmit) {
     return (
-      <ul className="workSection">
-        {workInfoList.map((workInfo) => (
-          <li key={workInfo.id}>
-            <p>{workInfo.company}</p>
-            <p>{workInfo.position}</p>
-            <p>{workInfo.startTime + "-" + workInfo.endTime}</p>
-            <ul>
-              {workInfo.workAchievementList.map((WorkAchievement) => (
-                <li key={WorkAchievement.id}>{WorkAchievement.text}</li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      <>
+        <h1>Work Experience</h1>
+        <ul className="workSection">
+          {workInfoList.map((workInfo) => (
+            <li key={workInfo.id}>
+              <p>{workInfo.company}</p>
+              <p>{workInfo.position}</p>
+              <p>{workInfo.startTime + "-" + workInfo.endTime}</p>
+              <ul>
+                {workInfo.workAchievementList.map((WorkAchievement) => (
+                  <li key={WorkAchievement.id}>{WorkAchievement.text}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </>
     );
   } else
     return (
-      <ul className="workSection">
-        {workInfoList.map((workInfo) => {
-          return (
-            <WorkInfo key={workInfo.id}>
-              {workInfoList.length > 1 && (
-                <DeleteButton
-                  onDeleteButtonClick={deleteWorkInfo(workInfo.id)}
+      <>
+        <h1>Work Experience</h1>
+        <ul className="workSection">
+          {workInfoList.map((workInfo) => {
+            return (
+              <WorkInfo key={workInfo.id}>
+                {workInfoList.length > 1 && (
+                  <DeleteButton
+                    onDeleteButtonClick={deleteWorkInfo(workInfo.id)}
+                  />
+                )}
+                <Input
+                  id="company"
+                  value={workInfo.company}
+                  placeholder="Company Name"
+                  onChange={onInputChange(workInfo.id, "company")}
                 />
-              )}
-              <Input
-                id="company"
-                value={workInfo.company}
-                placeholder="Company Name"
-                onChange={onInputChange(workInfo.id, "company")}
-              />
-              <Input
-                id="position"
-                value={workInfo.position}
-                placeholder="Position"
-                onChange={onInputChange(workInfo.id, "position")}
-              />
-              <TimeLength
-                startTime={workInfo.startTime}
-                endTime={workInfo.endTime}
-                onStartTimeChange={onInputChange(workInfo.id, "startTime")}
-                onEndTimeChange={onInputChange(workInfo.id, "endTime")}
-              />
-              <WorkAchievementList
-                workAchievementList={workInfo.workAchievementList}
-                onChange={onAchievementChange(workInfo.id)}
-                onAddAchievementClick={onAddAchievementClick(workInfo.id)}
-                onDeleteButtonClick={deleteAchievement(workInfo.id)}
-              />
-            </WorkInfo>
-          );
-        })}
-        <li>
-          <AddButton onClick={addNewWorkInfo} />
-        </li>
-      </ul>
+                <Input
+                  id="position"
+                  value={workInfo.position}
+                  placeholder="Position"
+                  onChange={onInputChange(workInfo.id, "position")}
+                />
+                <TimeLength
+                  startTime={workInfo.startTime}
+                  endTime={workInfo.endTime}
+                  onStartTimeChange={onInputChange(workInfo.id, "startTime")}
+                  onEndTimeChange={onInputChange(workInfo.id, "endTime")}
+                />
+                <WorkAchievementList
+                  workAchievementList={workInfo.workAchievementList}
+                  onChange={onAchievementChange(workInfo.id)}
+                  onAddAchievementClick={onAddAchievementClick(workInfo.id)}
+                  onDeleteButtonClick={deleteAchievement(workInfo.id)}
+                />
+              </WorkInfo>
+            );
+          })}
+          <li>
+            <AddButton onClick={addNewWorkInfo} />
+          </li>
+        </ul>
+      </>
     );
 }
 
