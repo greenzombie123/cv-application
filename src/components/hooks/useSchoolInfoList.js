@@ -42,23 +42,22 @@ export const useSchoolInfoList = () => {
 
   function deleteSchoolInfo(id) {
     return () => {
-      const listCopy = [...workInfoList];
+      const listCopy = [...schoolInfoList];
       const newListCopy = listCopy.filter((wi) => wi.id !== id);
-      setWorkInfoList(newListCopy);
+      setSchoolInfoList(newListCopy);
     };
   }
 
   function addNewSchoolInfo() {
-    const listCopy = [...workInfoList];
+    const listCopy = [...schoolInfoList];
     listCopy.push({
       id: listCopy.length + 1,
+      school: null,
+      degree: null,
       startTime: null,
       endTime: null,
-      company: null,
-      position: null,
-      workAchievementList: [],
     });
-    setWorkInfoList(listCopy);
+    setSchoolInfoList(listCopy);
   }
 
   return {

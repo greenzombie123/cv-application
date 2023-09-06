@@ -3,7 +3,7 @@ import { useSchoolInfoList } from "../../hooks/useSchoolInfoList"
 import "./AcademicSection.css"
 
 function AcademicSection(){
-    const {schoolInfoList, onInputChange} = useSchoolInfoList()
+    const {schoolInfoList, onInputChange, addNewSchoolInfo} = useSchoolInfoList()
  
     return(
         <div className="academicSection_container">
@@ -11,6 +11,7 @@ function AcademicSection(){
             <ul className="academicSection_list">
                 {schoolInfoList.map(ai=><SchoolInfo key={ai.id} {...ai} onInputChange={onInputChange(ai.id)}/>)}
             </ul>
+            <button onClick={addNewSchoolInfo}>Add School Entry</button>
         </div>
     )
 }
