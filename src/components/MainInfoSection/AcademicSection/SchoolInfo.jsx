@@ -29,12 +29,12 @@ function SchoolInfo({ school, degree, startTime, endTime, onInputChange }) {
       <input
         value={school}
         placeholder="School Name"
-        // onChange={onInputChange(workInfo.id, "company")}
+        onChange={onInputChange("school")}
       />
       <input
         value={degree}
-        placeholder="Position"
-        // onChange={onInputChange(workInfo.id, "position")}
+        placeholder="Degree"
+        onChange={onInputChange("degree")}
       />
       <TimeLength
         startTime={startTime}

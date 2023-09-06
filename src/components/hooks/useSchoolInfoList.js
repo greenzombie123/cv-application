@@ -4,12 +4,14 @@ import { academicInfo } from "../../academicinfo";
 export const useSchoolInfoList = () => {
   const [schoolInfoList, setSchoolInfoList] = useState(academicInfo);
 
-  function onInputChange(id, propName) {
-    return (e) => {
-      const listCopy = [...schoolInfoList];
-      const workInfoCopy = listCopy.find((wi) => wi.id === id);
-      workInfoCopy[propName] = e.target.value;
-      setSchoolInfoList(listCopy);
+  function onInputChange(id) {
+    return (propName) => {
+      return (e) => {
+        const listCopy = [...schoolInfoList];
+        const schoolInfoCopy = listCopy.find((ai) => ai.id === id);
+        schoolInfoCopy[propName] = e.target.value;
+        setSchoolInfoList(listCopy);
+      };
     };
   }
 
@@ -38,27 +40,27 @@ export const useSchoolInfoList = () => {
     };
   }
 
-    function deleteSchoolInfo(id) {
-      return () => {
-        const listCopy = [...workInfoList];
-        const newListCopy = listCopy.filter((wi) => wi.id !== id);
-        setWorkInfoList(newListCopy);
-      };
-    }
-
-    function addNewSchoolInfo() {
+  function deleteSchoolInfo(id) {
+    return () => {
       const listCopy = [...workInfoList];
-      listCopy.push({
-        id: listCopy.length + 1,
-        startTime: null,
-        endTime: null,
-        company: null,
-        position: null,
-        workAchievementList: []
-      });
-      setWorkInfoList(listCopy)
-    }
-  
+      const newListCopy = listCopy.filter((wi) => wi.id !== id);
+      setWorkInfoList(newListCopy);
+    };
+  }
+
+  function addNewSchoolInfo() {
+    const listCopy = [...workInfoList];
+    listCopy.push({
+      id: listCopy.length + 1,
+      startTime: null,
+      endTime: null,
+      company: null,
+      position: null,
+      workAchievementList: [],
+    });
+    setWorkInfoList(listCopy);
+  }
+
   return {
     onAddAchievementClick,
     onInputChange,
