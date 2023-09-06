@@ -39,8 +39,8 @@ function SchoolInfo({ school, degree, startTime, endTime, onInputChange }) {
       <TimeLength
         startTime={startTime}
         endTime={endTime}
-        // onStartTimeChange={onInputChange(id, "startTime")}
-        // onEndTimeChange={onInputChange(id, "endTime")}
+        onStartTimeChange={onInputChange("startTime")}
+        onEndTimeChange={onInputChange("endTime")}
       />
     </li>
   );
