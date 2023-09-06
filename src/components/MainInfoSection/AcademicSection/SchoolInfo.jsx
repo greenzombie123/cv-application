@@ -1,6 +1,6 @@
 import TimeLength from "../../UtilityComponents/TimeLength";
 
-function SchoolInfo({ school, degree, startTime, endTime, onInputChange }) {
+function SchoolInfo({ school, degree, startTime, endTime, onInputChange, onDeleleButtonClick }) {
   const hasSubmit = false;
   // return(
   //     if (hasSubmit) {
@@ -26,6 +26,9 @@ function SchoolInfo({ school, degree, startTime, endTime, onInputChange }) {
   //       } else
   return (
     <li className="schoolInfo">
+      <button className="deleteButton" onClick={onDeleleButtonClick}>
+        x
+      </button>
       <input
         value={school}
         placeholder="School Name"

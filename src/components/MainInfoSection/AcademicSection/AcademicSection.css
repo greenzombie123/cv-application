@@ -1,5 +1,9 @@
 .academicSection_container{
+    position: relative;
+}
 
+.academicSection_container > .deleteButton{
+    position: absolute;
 }
 
 .academicSection_list{
