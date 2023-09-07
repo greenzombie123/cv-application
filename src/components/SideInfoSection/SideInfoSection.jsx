@@ -1,9 +1,10 @@
+import LanguageList from './Language/LanguageList'
 import './SideInfoSection.css'
 
-function SideInfoSection({hasSubmit}){
+function SideInfoSection(){
     return (
         <div className='sideInfoSection'>
-
+            <LanguageList/>
         </div>
     )
 }
