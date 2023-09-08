@@ -1,6 +1,6 @@
 import LevelButtons from "./LevelButtons";
 
-function LanguageEntry({ language, level, onClick, onChange, onDeleteButtonClick }) {
+function LanguageEntry({ language, level, onClick, onChange, children}) {
   return (
     <div className="languageEntry">
       <div className="languageEntry_top">
@@ -8,7 +8,7 @@ function LanguageEntry({ language, level, onClick, onChange, onDeleteButtonClick
         <p>{level}</p>
       </div>
       <LevelButtons onClick={onClick} currentLevel={level}/>
-      <button className="deleteButton" onClick={onDeleteButtonClick}>x</button>
+      {children}
     </div>
   );
 }

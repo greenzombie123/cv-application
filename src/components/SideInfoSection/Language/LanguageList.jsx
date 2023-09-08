@@ -38,7 +38,7 @@ function LanguageList() {
     listCopy.push({
       id: listCopy.length + 1,
       language: null,
-      level: null
+      level: null,
     });
     setLanguageList(listCopy);
   }
@@ -54,7 +54,16 @@ function LanguageList() {
             onClick={onLanguageListChange(language.id, "level")}
             onChange={onLanguageListChange(language.id, "language")}
             onDeleteButtonClick={deleteLanguageEntry(language.id)}
-          />
+          >
+            {languageList.length > 1 && (
+              <button
+                className="deleteButton"
+                onClick={deleteLanguageEntry(language.id)}
+              >
+                x
+              </button>
+            )}
+          </LanguageEntry>
         ))}
       </ul>
       <button className="addButton">Add</button>
