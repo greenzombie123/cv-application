@@ -1,15 +1,34 @@
-.languageList{
-
+.languageList {
 }
 
-.language{
-
+.languageEntry {
 }
 
-.levelButtons{
-
+.languageEntry_top {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
 }
 
-.levelButton{
-    
+.languageEntry_top input {
+  width: 120px;
+}
+
+.levelButtons_container {
+}
+
+.levelButtons {
+}
+
+.levelButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 8px;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.levelButton_highlight{
+    background-color: greenyellow;
 }
