@@ -1,4 +1,4 @@
 export const languageData = [
-    {id:0,language:"English", level:"Native"},
-    {id:1,language:"Korean", level:"Intermediate"}
+    {id:1,language:"English", level:"Native"},
+    {id:2,language:"Korean", level:"Intermediate"}
 ]

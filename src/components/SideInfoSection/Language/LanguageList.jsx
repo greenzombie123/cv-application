@@ -37,8 +37,8 @@ function LanguageList() {
     const listCopy = [...languageList];
     listCopy.push({
       id: listCopy.length + 1,
-      language: null,
-      level: null,
+      language: "",
+      level: "Beginner",
     });
     setLanguageList(listCopy);
   }
@@ -66,7 +66,7 @@ function LanguageList() {
           </LanguageEntry>
         ))}
       </ul>
-      <button className="addButton">Add</button>
+      <button className="addButton" onClick={addNewLanguageEntry}>Add</button>
     </>
   );
 }
