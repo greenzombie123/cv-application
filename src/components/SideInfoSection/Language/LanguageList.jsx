@@ -48,7 +48,7 @@ function LanguageList() {
   }
 
   return (
-    <>
+    <div>
       <h1>Languages</h1>
       <ul className="langaugeList">
         {languageList.map((language) => (
@@ -71,7 +71,7 @@ function LanguageList() {
         ))}
       </ul>
       {!hasSubmit && <button className="addButton" onClick={addNewLanguageEntry}>Add</button>}
-    </>
+    </div>
   );
 }
 
