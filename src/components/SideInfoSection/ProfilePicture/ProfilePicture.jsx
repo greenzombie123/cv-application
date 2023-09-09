@@ -1,12 +1,12 @@
-// import profilePic from "../../../assets/profilePictureImg.png";
 import "./ProfilePicture.css";
 import { useProfilePicture } from "../../hooks/useProfilePicture";
+import blankPic from '../../../assets/blank.webp'
 
 function ProfilePicture() {
-  const { profilePicture, addPicture } = useProfilePicture();
+  const { profilePicture, addPicture, deletePicture} = useProfilePicture();
   return (
     <div className="profilePicture">
-      <img className="profilePicture_img" src={profilePicture} alt="" />
+      <img className="profilePicture_img" src={profilePicture || blankPic} alt="" />
       <div className="profilePicture_button">
         <label htmlFor="picture">{profilePicture ? "⟳" : "+"}</label>
         <input
@@ -16,6 +16,8 @@ function ProfilePicture() {
           onChange={addPicture}
         />
       </div>
+
+      <button className="profilePicture_deleteButton" onClick={deletePicture}>x</button>
     </div>
   );
 }
