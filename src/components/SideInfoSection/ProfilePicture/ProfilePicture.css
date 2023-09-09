@@ -17,6 +17,10 @@
   right: 0;
 }
 
+.profilePicture_button:hover{
+    background-color: whitesmoke;
+}
+
 .profilePicture_button label {
   display: block;
   padding: 0 8px;
