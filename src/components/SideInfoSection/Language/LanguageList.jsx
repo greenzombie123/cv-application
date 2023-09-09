@@ -2,9 +2,13 @@ import { useState } from "react";
 import { languageData } from "../../../langaugedata";
 import LanguageEntry from "./LanguageEntry";
 import "./LanguageList.css";
+import { useContext } from "react";
+import { useHasSubmit } from "../../../hasSubmitContext";
 
 function LanguageList() {
   const [languageList, setLanguageList] = useState(languageData);
+  const { HasSubmitContext } = useHasSubmit();
+  const hasSubmit = useContext(HasSubmitContext);
 
   function onLanguageListChange(id, propName) {
     const listCopy = [...languageList];
@@ -66,7 +70,7 @@ function LanguageList() {
           </LanguageEntry>
         ))}
       </ul>
-      <button className="addButton" onClick={addNewLanguageEntry}>Add</button>
+      {hasSubmit && <button className="addButton" onClick={addNewLanguageEntry}>Add</button>}
     </>
   );
 }
