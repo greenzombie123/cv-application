@@ -3,13 +3,13 @@ import "./ProfilePicture.css";
 import { useProfilePicture } from "../../hooks/useProfilePicture";
 
 function ProfilePicture() {
-    const {profilePicture} = useProfilePicture() 
+    const {profilePicture, addPicture} = useProfilePicture() 
   return (
     <div className="profilePicture">
       <img className="profilePicture_img" src={profilePicture} alt="" />
       <div className="profilePicture_button">
         <label htmlFor="picture">+</label>
-        <input className="profilePicture_filePicker" type="file" id="picture" />
+        <input className="profilePicture_filePicker" type="file" id="picture" onChange={addPicture}/>
       </div>
     </div>
   );

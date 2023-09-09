@@ -5,7 +5,7 @@ export const useProfilePicture = ()=> {
     const [profilePicture, setProfilePicture] = useState(profilePic)
 
     function addPicture(e){
-        const pic = e.target.value
+        const pic = window.URL.createObjectURL(e.target.files[0])
         setProfilePicture(pic)
     }
 
