@@ -6,8 +6,9 @@ function ProfilePicture(){
 
         <div className="profilePicture">
             <img className="profilePicture_img" src={profilePic} alt="" />  
-            <button className="profilePicture_button">+</button>
-            <input className="profilePicture_filePicker" type="file" />
+            <div className="profilePicture_button">
+            +<input className="profilePicture_filePicker" type="file" />
+            </div>
         </div>
     )
 }
