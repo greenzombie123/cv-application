@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { useHasSubmit } from "../../../hasSubmitContext";
-import { objectiveInfo } from "../../../ObjectiveInfo";
+import { objectiveInfo } from "../../../Data/ObjectiveInfo";
 
 function CareerObjectiveSection() {
   const [objective, setObjective] = useState(objectiveInfo);

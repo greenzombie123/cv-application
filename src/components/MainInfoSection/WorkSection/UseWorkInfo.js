@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { workInfoList as Info } from "../../../cvinfo";
+import { workInfoList as Info } from "../../../Data/cvinfo";
 
 export const useWorkInfoList = () => {
   const [workInfoList, setWorkInfoList] = useState(Info);

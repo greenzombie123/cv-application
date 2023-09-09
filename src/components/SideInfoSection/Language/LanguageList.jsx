@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { languageData } from "../../../langaugedata";
+import { languageData } from "../../../Data/langaugedata";
 import LanguageEntry from "./LanguageEntry";
 import "./LanguageList.css";
 import { useContext } from "react";
