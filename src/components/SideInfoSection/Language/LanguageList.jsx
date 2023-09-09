@@ -70,7 +70,7 @@ function LanguageList() {
           </LanguageEntry>
         ))}
       </ul>
-      {hasSubmit && <button className="addButton" onClick={addNewLanguageEntry}>Add</button>}
+      {!hasSubmit && <button className="addButton" onClick={addNewLanguageEntry}>Add</button>}
     </>
   );
 }
