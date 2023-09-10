@@ -1,6 +1,6 @@
 import TimeLength from "../../UtilityComponents/TimeLength";
 import { useContext } from "react";
-import { useHasSubmit } from "../../../hasSubmitContext";
+import { useHasSubmit } from "../../../context/hasSubmitContext";
 
 function SchoolInfo({
   school,

@@ -1,5 +1,5 @@
-import { useSkillList } from "../../hooks/useSkillList";
-import { useHasSubmit } from "../../../hasSubmitContext";
+import { useSkillList } from "../../../hooks/useSkillList";
+import { useHasSubmit } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
 
 function SkillList() {

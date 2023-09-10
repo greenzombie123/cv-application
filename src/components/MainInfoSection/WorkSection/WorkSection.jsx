@@ -6,7 +6,7 @@ import DeleteButton from "../../UtilityComponents/DeleteButton";
 import "./WorkSection.css";
 import { useWorkInfoList } from "./UseWorkInfo";
 import AddButton from "../../UtilityComponents/AddButton";
-import { useHasSubmit } from "../../../hasSubmitContext";
+import { useHasSubmit } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
 
 function WorkSection() {

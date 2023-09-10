@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { skillData } from "../../Data/skilldata";
+import { skillData } from "../Data/skilldata";
 import { v4 as uuidv4 } from "uuid";
 
 export const useSkillList = () => {

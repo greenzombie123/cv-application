@@ -1,7 +1,7 @@
 import SchoolInfo from "./SchoolInfo";
-import { useSchoolInfoList } from "../../hooks/useSchoolInfoList";
+import { useSchoolInfoList } from "../../../hooks/useSchoolInfoList";
 import "./AcademicSection.css";
-import { useHasSubmit } from "../../../hasSubmitContext";
+import { useHasSubmit } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
 
 function AcademicSection() {

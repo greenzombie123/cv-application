@@ -1,6 +1,6 @@
 import TopInfoSection from "./components/TopInfoSection/TopInfoSection";
 import "./App.css";
-import { useHasSubmit } from "./hasSubmitContext";
+import { useHasSubmit } from "./context/hasSubmitContext";
 import SideInfoSection from "./components/SideInfoSection/SideInfoSection";
 import MainInfoSection from "./components/MainInfoSection/MainInfoSection";
 

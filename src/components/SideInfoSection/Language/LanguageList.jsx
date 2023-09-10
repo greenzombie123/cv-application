@@ -3,7 +3,7 @@ import { languageData } from "../../../Data/langaugedata";
 import LanguageEntry from "./LanguageEntry";
 import "./LanguageList.css";
 import { useContext } from "react";
-import { useHasSubmit } from "../../../hasSubmitContext";
+import { useHasSubmit } from "../../../context/hasSubmitContext";
 
 function LanguageList() {
   const [languageList, setLanguageList] = useState(languageData);

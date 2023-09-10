@@ -1,7 +1,7 @@
 import Input from "../UtilityComponents/Input"
 import "../css/Name.css"
 import { useContext } from "react";
-import { useHasSubmit } from "../../hasSubmitContext";
+import { useHasSubmit } from "../../context/hasSubmitContext";
 
 function Name({name, onChange}){
     const {HasSubmitContext} = useHasSubmit()
