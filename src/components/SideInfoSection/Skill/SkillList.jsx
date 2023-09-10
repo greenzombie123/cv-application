@@ -1,23 +1,52 @@
 import { useSkillList } from "../../hooks/useSkillList";
+import { useHasSubmit } from "../../../hasSubmitContext";
+import { useContext } from "react";
 
 function SkillList() {
-  const { skillList, onInputChange, addItemToList, deleteItemFromList } = useSkillList();
+  const { skillList, onInputChange, addItemToList, deleteItemFromList } =
+    useSkillList();
+  const { HasSubmitContext } = useHasSubmit();
+  const hasSubmit = useContext(HasSubmitContext);
+
+  if (hasSubmit) {
+    return (
+      <div>
+        <h1>Skills</h1>
+        <ul className="skillList">
+          {skillList.map((skill) => (
+            <li className="skillList_item" key={skill.id}>
+              <p>{skill.skill}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 
   return (
-    <ul className="skillList">
-      {skillList.map((skill) => (
-        <li className="skillList_item" key={skill.id}>
-          <input
-            id={skill.id}
-            placeholder="Enter a skill"
-            onChange={onInputChange(skill.id,'skill')}
-            value={skill.skill}
-          />{" "}
-          <button className="skillList_deleteButton" onClick={deleteItemFromList(skill.id)}>x</button>
-        </li>
-      ))}
-      <button className="skillList_addButton" onClick={addItemToList}>Add</button>
-    </ul>
+    <div>
+      <h1>Skills</h1>
+      <ul className="skillList">
+        {skillList.map((skill) => (
+          <li className="skillList_item" key={skill.id}>
+            <input
+              placeholder="Enter a skill"
+              onChange={onInputChange(skill.id, "skill")}
+              value={skill.skill}
+            />{" "}
+            <button
+              className="skillList_deleteButton"
+              onClick={deleteItemFromList(skill.id)}
+            >
+              x
+            </button>
+          </li>
+        ))}
+        <button className="skillList_addButton" onClick={addItemToList}>
+          Add
+        </button>
+      </ul>
+    </div>
   );
 }
 
