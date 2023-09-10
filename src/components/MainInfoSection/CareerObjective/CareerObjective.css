@@ -1,3 +1,14 @@
-.careerObjective{
-    
+.careerObjective {
+}
+
+.careerObjective > textarea {
+  width: 100%;
+  font-size: 1.2rem;
+  min-height: 50px;
+  resize: none;
+}
+
+.careerObjective > p {
+  font-size: 1.2rem;
+  margin: 0 15px;
 }

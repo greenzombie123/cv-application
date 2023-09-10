@@ -25,7 +25,7 @@ function WorkSection() {
 
   if (hasSubmit) {
     return (
-      <>
+      <div>
         <h1>Work Experience</h1>
         <ul className="workSection">
           {workInfoList.map((workInfo) => (
@@ -41,11 +41,11 @@ function WorkSection() {
             </li>
           ))}
         </ul>
-      </>
+      </div>
     );
   } else
     return (
-      <>
+      <div>
         <h1>Work Experience</h1>
         <ul className="workSection">
           {workInfoList.map((workInfo) => {
@@ -87,7 +87,7 @@ function WorkSection() {
             <AddButton onClick={addNewWorkInfo} />
           </li>
         </ul>
-      </>
+      </div>
     );
 }
 

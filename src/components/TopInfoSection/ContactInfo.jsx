@@ -1,5 +1,5 @@
 import Input from "../UtilityComponents/Input";
-import "../css/ContactInfo.css";
+import "./ContactInfo.css";
 import { useContext } from "react";
 import { useHasSubmit } from "../../context/hasSubmitContext";
 

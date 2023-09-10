@@ -1,5 +1,12 @@
 .name{
+    display: flex;
+    align-items: center;
     width: 60%;
     height: 100%;
     border: 1px solid;
+    font-size: 3.2rem;
+}
+
+.name > input{
+    width: 100%;
 }
