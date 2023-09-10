@@ -1,23 +1,22 @@
-import { useContext } from "react";
 import { useSkillList } from "../../hooks/useSkillList";
 
 function SkillList() {
-  const { skillList, onInputChange } = useSkillList();
+  const { skillList, onInputChange, addItemToList, deleteItemFromList } = useSkillList();
 
   return (
-    <ul className="skilllist">
+    <ul className="skillList">
       {skillList.map((skill) => (
         <li className="skillList_item" key={skill.id}>
           <input
             id={skill.id}
-            value={skill.skill}
             placeholder="Enter a skill"
             onChange={onInputChange(skill.id,'skill')}
+            value={skill.skill}
           />{" "}
-          <button className="skillList_deleteButton">x</button>
+          <button className="skillList_deleteButton" onClick={deleteItemFromList(skill.id)}>x</button>
         </li>
       ))}
-      <button>+</button>
+      <button className="skillList_addButton" onClick={addItemToList}>Add</button>
     </ul>
   );
 }

@@ -5,25 +5,14 @@ import { v4 as uuidv4 } from "uuid";
 export const useSkillList = () => {
   const [skillList, setSkillList] = useState(skillData);
 
-  //   function onInputChange(id) {
-  //     return (propName) => {
-  //       return (e) => {
-  //         const listCopy = [...schoolInfoList];
-  //         const schoolInfoCopy = listCopy.find((ai) => ai.id === id);
-  //         schoolInfoCopy[propName] = e.target.value;
-  //         setSchoolInfoList(listCopy);
-  //       };
-  //     };
-  //   }
-
   function onInputChange(stateList, setState) {
     return (id, propName) => {
-        return (e) => {
-          const listCopy = [...stateList];
-          const itemCopy = listCopy.find((ai) => ai.id === id);
-          itemCopy[propName] = e.target.value;
-          setState(listCopy);
-        };
+      return (e) => {
+        const listCopy = [...stateList];
+        const itemCopy = listCopy.find((ai) => ai.id === id);
+        itemCopy[propName] = e.target.value;
+        setState(listCopy);
+      };
     };
   }
 
@@ -37,29 +26,26 @@ export const useSkillList = () => {
     };
   }
 
-  function addItemToList(stateList, setState, newItem) {
-    const listCopy = [...stateList];
-    listCopy.push(newItem);
-    setState(listCopy);
+  function addItemToList(stateList, setState, callback) {
+    return () => {
+      const listCopy = [...stateList];
+      const newItem = callback();
+      listCopy.push(newItem);
+      setState(listCopy);
+    };
   }
 
-  function incrementID() {
-    const newId = skillList.length + 1;
-    return newId;
-  }
-
-  function createNewSchoolInfo() {
+  function createNewSkill() {
     return {
-      id: incrementID(),
-      school: "",
-      degree: "",
-      startTime: "",
-      endTime: "",
+      id: uuidv4(),
+      skill: "",
     };
   }
 
   return {
     skillList,
-    onInputChange:onInputChange(skillList, setSkillList)
+    onInputChange: onInputChange(skillList, setSkillList),
+    deleteItemFromList: deleteItemFromList(skillList, setSkillList),
+    addItemToList: addItemToList(skillList, setSkillList, createNewSkill),
   };
 };
