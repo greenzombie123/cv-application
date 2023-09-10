@@ -1,10 +1,8 @@
 import { useContext } from "react";
-import { skillData } from "../../../Data/skilldata";
-import { useState } from "react";
+import { useSkillList } from "../../hooks/useSkillList";
 
 function SkillList() {
-  const [skillList, setSkillList] = useState(skillData);
-
+  const { skillList, onInputChange } = useSkillList();
 
   return (
     <ul className="skilllist">
@@ -14,17 +12,12 @@ function SkillList() {
             id={skill.id}
             value={skill.skill}
             placeholder="Enter a skill"
-            onChange={onChange(skill.id)}
+            onChange={onInputChange(skill.id,'skill')}
           />{" "}
-          <button
-            className="skillList_deleteButton"
-            onDeleteButtonClick={onDeleteButtonClick(skillid)}
-          >
-            x
-          </button>
+          <button className="skillList_deleteButton">x</button>
         </li>
       ))}
-      <button onClick={addSkill}>+</button>
+      <button>+</button>
     </ul>
   );
 }

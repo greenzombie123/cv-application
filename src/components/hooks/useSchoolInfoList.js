@@ -36,9 +36,7 @@ export const useSchoolInfoList = () => {
   }
 
   return {
-    onAddAchievementClick,
     onInputChange,
-    deleteAchievement,
     addNewSchoolInfo,
     deleteSchoolInfo,
     schoolInfoList,

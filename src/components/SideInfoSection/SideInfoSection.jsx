@@ -8,7 +8,7 @@ function SideInfoSection(){
         <div className='sideInfoSection'>
             <ProfilePicture/>
             <LanguageList/>
-            {/* <SkillList/> */}
+            <SkillList/>
         </div>
     )
 }
