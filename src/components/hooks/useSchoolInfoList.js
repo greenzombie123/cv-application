@@ -15,31 +15,6 @@ export const useSchoolInfoList = () => {
     };
   }
 
-  function onAddAchievementClick(id) {
-    return () => {
-      const listCopy = [...workInfoList];
-      const workInfoCopy = listCopy.find((wi) => wi.id === id);
-      const newId = workInfoCopy.workAchievementList.length + 1;
-      workInfoCopy.workAchievementList.push({ id: newId, text: "" });
-      setWorkInfoList(listCopy);
-    };
-  }
-
-  function deleteAchievement(workInfoId) {
-    return (achievementId) => {
-      const listCopy = [...workInfoList];
-      const workInfoCopy = listCopy.find((wi) => wi.id === workInfoId);
-      const achievementListCopy = workInfoCopy.workAchievementList;
-      return () => {
-        const newAchievementList = achievementListCopy.filter(
-          (a) => a.id !== achievementId
-        );
-        workInfoCopy.workAchievementList = newAchievementList;
-        setWorkInfoList(listCopy);
-      };
-    };
-  }
-
   function deleteSchoolInfo(id) {
     return () => {
       const listCopy = [...schoolInfoList];
@@ -52,10 +27,10 @@ export const useSchoolInfoList = () => {
     const listCopy = [...schoolInfoList];
     listCopy.push({
       id: listCopy.length + 1,
-      school: null,
-      degree: null,
-      startTime: null,
-      endTime: null,
+      school: "",
+      degree: "",
+      startTime: "",
+      endTime: "",
     });
     setSchoolInfoList(listCopy);
   }
