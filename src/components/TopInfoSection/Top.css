@@ -1,6 +1,7 @@
-.top{
-    display: flex;
-    flex-flow: row nowrap;
-    /* height: 100px; */
-    border: 1px black solid;
+.top {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px;
+  background-color: beige;
+  margin-bottom: 10px;
 }

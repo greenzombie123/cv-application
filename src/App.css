@@ -18,6 +18,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: whitesmoke;
 }
 /*
   5. Improve media defaults
@@ -48,26 +49,25 @@ p, h1, h2, h3, h4, h5, h6 {
 .App {
   display: grid;
   grid-template-columns: 3fr 6fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: max-content auto;
   grid-template-areas: "top top"
   "side main";
-  margin: 0 auto;
-  width: 50%;
-  border: 5px solid green;
-  padding-bottom: 14px;
+  /* gap: 25px; */
+  margin: 15px auto;
+  width: 800px;
+  height: 1120px;
+  box-shadow: 4px 3px 0px 0px #8080808a;
+  background-color: white;
 }
 
 .top {
   grid-area: top;
-  border: 1px solid black;
 }
 
 .sideInfoSection {
   grid-area: side;
-  border: 1px solid black;
 }
 
 .mainInfoSection {
   grid-area: main;
-  border: 1px solid black;
 }

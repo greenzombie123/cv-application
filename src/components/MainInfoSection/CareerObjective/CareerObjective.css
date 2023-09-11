@@ -1,15 +1,18 @@
 .careerObjective {
 }
 
-.careerObjective > textarea {
-  width: 100%;
-  font-size: 1.2rem;
-  min-height: 50px;
-  resize: none;
-  overflow: hidden;
-}
-
 .careerObjective > p {
-  font-size: 1.2rem;
+  font-size: 18px;
   margin: 0 15px;
 }
+
+.careerObjective > textarea {
+    display: block;
+    font-size: 18px;
+    width: 95%;
+    min-height: 50px;
+    resize: none;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
