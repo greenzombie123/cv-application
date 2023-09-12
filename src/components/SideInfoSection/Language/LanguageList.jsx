@@ -50,7 +50,7 @@ function LanguageList() {
   return (
     <div>
       <h1>Languages</h1>
-      <ul className="langaugeList">
+      <ul className="languageList">
         {languageList.map((language) => (
           <LanguageEntry
             key={language.id}

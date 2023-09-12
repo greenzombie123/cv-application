@@ -1,8 +1,11 @@
 .languageList {
+  list-style: none;
+  padding: 0;
 }
 
 .languageEntry {
   position: relative;
+  margin-bottom: 5px;
 }
 
 .languageEntry .deleteButton{

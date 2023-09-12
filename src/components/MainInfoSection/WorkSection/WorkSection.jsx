@@ -8,6 +8,7 @@ import { useWorkInfoList } from "./UseWorkInfo";
 import AddButton from "../../UtilityComponents/AddButton";
 import { useHasSubmit } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
+import { formatDate } from "../../../util/formatDate";
 
 function WorkSection() {
   const {
@@ -29,13 +30,13 @@ function WorkSection() {
         <h1>Work Experience</h1>
         <ul className="workSection">
           {workInfoList.map((workInfo) => (
-            <li key={workInfo.id}>
-              <p>{workInfo.company}</p>
-              <p>{workInfo.position}</p>
-              <p>{workInfo.startTime + "-" + workInfo.endTime}</p>
-              <ul>
+            <li key={workInfo.id} className="workSection_item">
+              <p className="workSection_company">{workInfo.company}</p>
+              <p className="workSection_position">{workInfo.position}</p>
+              <p className="workSection_Time">{formatDate(workInfo.startTime, workInfo.endTime)}</p>
+              <ul className="workSection_achievementList">
                 {workInfo.workAchievementList.map((WorkAchievement) => (
-                  <li key={WorkAchievement.id}>{WorkAchievement.text}</li>
+                  <li className="workSection_achievementList_item" key={WorkAchievement.id}>{WorkAchievement.text}</li>
                 ))}
               </ul>
             </li>
@@ -52,9 +53,7 @@ function WorkSection() {
             return (
               <WorkInfo key={workInfo.id}>
                 {workInfoList.length > 1 && (
-                  <DeleteButton
-                    onDeleteButtonClick={deleteWorkInfo(workInfo.id)}
-                  />
+                  <button className="workInfo_deleteButton" onClick={deleteWorkInfo(workInfo.id)}>x</button>
                 )}
                 <Input
                   id="company"

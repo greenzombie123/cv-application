@@ -1,8 +1,8 @@
 import SchoolInfo from "./SchoolInfo";
 import { useSchoolInfoList } from "../../../hooks/useSchoolInfoList";
-import "./AcademicSection.css";
 import { useHasSubmit } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
+import "./AcademicSection.css"
 
 function AcademicSection() {
   const { schoolInfoList, onInputChange, addNewSchoolInfo, deleteSchoolInfo } =

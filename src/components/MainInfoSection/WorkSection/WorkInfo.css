@@ -2,9 +2,34 @@
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    font-size: 18px;}
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+}
 
-.workInfo > .deleteButton{
+.workInfo:has(.workInfo_deleteButton:hover){
+    border: 2px dotted blue;
+}
+
+.workInfo_deleteButton {
     position: absolute;
-    left: 90%;
+    top: 3px;
+    right: 0;
+    padding: 0px 6px;
+    border-radius: 98%;
+    line-height: 1.4;
+    border: 1px red solid;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+.workInfo input{
+ margin: 5px 0;
+}
+
+.workInfo .timeLength_timeSlot input{
+    margin-top: 0;
 }

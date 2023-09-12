@@ -1,5 +1,9 @@
 .skillList{
+    padding-left: 20px;
+}
 
+.skillList_container{
+    margin-top: 20px;
 }
 
 .skillList_deleteButton{
@@ -8,4 +12,8 @@
 
 .skillList_addButton{
     
+}
+
+.skillList_item{
+  margin-bottom: 5px;
 }

@@ -55,7 +55,8 @@ p, h1, h2, h3, h4, h5, h6 {
   /* gap: 25px; */
   margin: 15px auto;
   width: 800px;
-  height: 1120px;
+  /* height: 1120px; */
+  min-height: 1120px;
   box-shadow: 4px 3px 0px 0px #8080808a;
   background-color: white;
 }

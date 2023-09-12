@@ -11,6 +11,6 @@ export const academicInfo = [
     school: "Arizona State University",
     degree: "Bachelor's Degree in Chemistry",
     startTime: "2018-07-22",
-    endTime: "2019-10-22",
+    endTime: "2025-10-26",
   },
 ];

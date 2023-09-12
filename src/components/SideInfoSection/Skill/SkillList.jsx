@@ -1,6 +1,7 @@
 import { useSkillList } from "../../../hooks/useSkillList";
 import { useHasSubmit } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
+import './SkillList.css'
 
 function SkillList() {
   const { skillList, onInputChange, addItemToList, deleteItemFromList } =
@@ -10,7 +11,7 @@ function SkillList() {
 
   if (hasSubmit) {
     return (
-      <div>
+      <div className="skillList_container">
         <h1>Skills</h1>
         <ul className="skillList">
           {skillList.map((skill) => (

@@ -4,3 +4,20 @@
     font-size: 18px;
     margin: 0 15px;
 }
+
+.workSection_item{
+    border-bottom: 1px solid gray;
+    line-height: 1.6;
+}
+
+.workSection_item p:nth-child(3){
+    color: gray;
+}
+
+.workSection_item{
+    
+}
+
+.workSection_item{
+    
+}
