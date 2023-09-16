@@ -61,7 +61,7 @@ function LanguageList() {
           >
             {languageList.length > 1 && (
               <button
-                className="deleteButton"
+                className="languageEntry_deleteButton"
                 onClick={deleteLanguageEntry(language.id)}
               >
                 x
@@ -70,7 +70,7 @@ function LanguageList() {
           </LanguageEntry>
         ))}
       </ul>
-      {!hasSubmit && <button className="addButton" onClick={addNewLanguageEntry}>Add</button>}
+      {!hasSubmit && <button className="languageList_addButton" onClick={addNewLanguageEntry}>Add</button>}
     </div>
   );
 }

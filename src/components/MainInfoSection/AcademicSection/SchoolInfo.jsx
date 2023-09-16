@@ -11,12 +11,12 @@ function SchoolInfo({
   onInputChange,
   onDeleleButtonClick,
 }) {
-  const {HasSubmitContext} = useHasSubmit()
-  const hasSubmit = useContext(HasSubmitContext)
+  const { HasSubmitContext } = useHasSubmit();
+  const hasSubmit = useContext(HasSubmitContext);
 
   if (hasSubmit) {
     return (
-      <li className="schoolInfo">
+      <li className="schoolInfo schoolInfo_submit">
         <p>{school}</p>
         <p>{degree}</p>
         <p>{formatDate(startTime, endTime)}</p>
@@ -25,15 +25,17 @@ function SchoolInfo({
   } else
     return (
       <li className="schoolInfo">
-        <button className="deleteButton" onClick={onDeleleButtonClick}>
+        <button className="schoolInfo_deleteButton" onClick={onDeleleButtonClick}>
           x
         </button>
         <input
+          className="schoolInfo_input"
           value={school}
           placeholder="School Name"
           onChange={onInputChange("school")}
         />
         <input
+          className="schoolInfo_input"
           value={degree}
           placeholder="Degree"
           onChange={onInputChange("degree")}

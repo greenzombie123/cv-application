@@ -83,7 +83,7 @@ function WorkSection() {
             );
           })}
           <li>
-            <AddButton onClick={addNewWorkInfo} />
+            <button className="workSection_button" onClick={addNewWorkInfo}>Add</button>
           </li>
         </ul>
       </div>

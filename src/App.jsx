@@ -5,7 +5,11 @@ import SideInfoSection from "./components/SideInfoSection/SideInfoSection";
 import MainInfoSection from "./components/MainInfoSection/MainInfoSection";
 
 function App() {
-  const {hasSubmit, setHasSubmit, HasSubmitContext} = useHasSubmit()
+  const { hasSubmit, setHasSubmit, HasSubmitContext } = useHasSubmit();
+
+  function onPreviewButtonClick(){
+    setHasSubmit(!hasSubmit)
+  }
 
   return (
     <div className="App">
@@ -14,6 +18,10 @@ function App() {
         <SideInfoSection hasSubmit={hasSubmit} />
         <MainInfoSection hasSubmit={hasSubmit} />
       </HasSubmitContext.Provider>
+      <div className="buttonContainer">
+        <button className="previewButton" onClick={onPreviewButtonClick}>Preview</button>
+        <button className="submitButton">Submit</button>
+      </div>
     </div>
   );
 }

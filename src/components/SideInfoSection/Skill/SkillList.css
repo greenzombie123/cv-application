@@ -1,19 +1,33 @@
-.skillList{
-    padding-left: 20px;
+.skillList {
+  padding-left: 20px;
 }
 
-.skillList_container{
-    margin-top: 20px;
+.skillList:has(input) {
+  list-style: none;
 }
 
-.skillList_deleteButton{
-
+.skillList_container {
+  margin-top: 20px;
 }
 
-.skillList_addButton{
-    
+.skillList_deleteButton {
+  position: absolute;
+  top: 5px;
+  left: -27px;
+  padding: 0px 6px;
+  border-radius: 98%;
+  line-height: 1.4;
+  border: 1px red solid;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+  font-size: 13px;
 }
 
-.skillList_item{
+.skillList_addButton {
+}
+
+.skillList_item {
+  position: relative;
   margin-bottom: 5px;
 }

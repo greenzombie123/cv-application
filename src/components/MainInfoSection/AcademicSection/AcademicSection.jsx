@@ -2,7 +2,7 @@ import SchoolInfo from "./SchoolInfo";
 import { useSchoolInfoList } from "../../../hooks/useSchoolInfoList";
 import { useHasSubmit } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
-import "./AcademicSection.css"
+import './AcademicSection.css'
 
 function AcademicSection() {
   const { schoolInfoList, onInputChange, addNewSchoolInfo, deleteSchoolInfo } =
@@ -24,7 +24,7 @@ function AcademicSection() {
         ))}
       </ul>
       {!hasSubmit && (
-        <button onClick={addNewSchoolInfo}>Add School Entry</button>
+        <button className="academicList_addButton" onClick={addNewSchoolInfo}>Add School Entry</button>
       )}
     </div>
   );

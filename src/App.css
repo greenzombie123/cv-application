@@ -46,19 +46,24 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+#root{
+  position: relative;
+}
+
 .App {
   display: grid;
   grid-template-columns: 3fr 6fr;
   grid-template-rows: max-content auto;
   grid-template-areas: "top top"
-  "side main";
-  /* gap: 25px; */
+  "side main"
+  "buttons buttons"
+  ;
   margin: 15px auto;
   width: 800px;
-  /* height: 1120px; */
   min-height: 1120px;
   box-shadow: 4px 3px 0px 0px #8080808a;
   background-color: white;
+  margin-bottom: 50px;
 }
 
 .top {
@@ -71,4 +76,66 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .mainInfoSection {
   grid-area: main;
+}
+
+.buttonContainer{
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  grid-area: buttons;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #d0e3f3;
+  gap: 10px;
+  margin-top: 20px
+}
+
+.submitButton{
+}
+
+.previewButton{
+}
+
+.submitButton, .previewButton {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.submitButton:hover,
+.submitButton:focus, 
+.previewButton:hover,
+.previewButton:focus {
+  background-color: #07c;
+}
+
+.submitButton:focus,
+.previewButton:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.submitButton:active,
+.previewButton:active {
+  background-color: #0064bd;
+  box-shadow: none;
 }
