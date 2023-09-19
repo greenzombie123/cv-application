@@ -29,8 +29,8 @@ export const useSchoolInfoList = () => {
       id: listCopy.length + 1,
       school: "",
       degree: "",
-      startTime: "",
-      endTime: "",
+      startTime: "2024-12-31",
+      endTime: "2024-12-31",
     });
     setSchoolInfoList(listCopy);
   }

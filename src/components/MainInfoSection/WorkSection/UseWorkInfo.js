@@ -65,8 +65,8 @@ export const useWorkInfoList = () => {
       const listCopy = [...workInfoList];
       listCopy.push({
         id: listCopy.length + 1,
-        startTime: "",
-        endTime: "",
+        startTime: "2024-12-31",
+        endTime: "2024-12-31",
         company: "",
         position: "",
         workAchievementList: []
