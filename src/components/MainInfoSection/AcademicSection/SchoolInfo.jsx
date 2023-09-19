@@ -1,6 +1,6 @@
 import TimeLength from "../../UtilityComponents/TimeLength";
 import { useContext } from "react";
-import { useHasSubmit } from "../../../context/hasSubmitContext";
+import { HasSubmitContext } from "../../../context/hasSubmitContext";
 import { formatDate } from "../../../util/formatDate";
 
 function SchoolInfo({
@@ -11,7 +11,6 @@ function SchoolInfo({
   onInputChange,
   onDeleleButtonClick,
 }) {
-  const { HasSubmitContext } = useHasSubmit();
   const hasSubmit = useContext(HasSubmitContext);
 
   if (hasSubmit) {

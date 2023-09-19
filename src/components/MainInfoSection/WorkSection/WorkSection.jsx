@@ -6,7 +6,7 @@ import DeleteButton from "../../UtilityComponents/DeleteButton";
 import "./WorkSection.css";
 import { useWorkInfoList } from "./UseWorkInfo";
 import AddButton from "../../UtilityComponents/AddButton";
-import { useHasSubmit } from "../../../context/hasSubmitContext";
+import { HasSubmitContext } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
 import { formatDate } from "../../../util/formatDate";
 
@@ -21,7 +21,6 @@ function WorkSection() {
     addNewWorkInfo,
   } = useWorkInfoList();
 
-  const { HasSubmitContext } = useHasSubmit();
   const hasSubmit = useContext(HasSubmitContext);
 
   if (hasSubmit) {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useContext } from "react";
-import { useHasSubmit } from "../../../context/hasSubmitContext";
+import { HasSubmitContext } from "../../../context/hasSubmitContext";
 import { objectiveInfo } from "../../../Data/ObjectiveInfo";
 import "./CareerObjective.css";
 import { useResizeTextarea } from "../../../hooks/useResizeTextArea";
@@ -8,7 +8,6 @@ import { useEffect } from "react";
 
 function CareerObjectiveSection() {
   const [objective, setObjective] = useState(objectiveInfo);
-  const { HasSubmitContext } = useHasSubmit();
   const hasSubmit = useContext(HasSubmitContext);
   const { textareaRef, resizeTextarea } = useResizeTextarea();
 

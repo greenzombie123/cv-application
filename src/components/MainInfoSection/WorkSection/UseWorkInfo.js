@@ -65,10 +65,10 @@ export const useWorkInfoList = () => {
       const listCopy = [...workInfoList];
       listCopy.push({
         id: listCopy.length + 1,
-        startTime: null,
-        endTime: null,
-        company: null,
-        position: null,
+        startTime: "",
+        endTime: "",
+        company: "",
+        position: "",
         workAchievementList: []
       });
       setWorkInfoList(listCopy)

@@ -1,13 +1,15 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const academicInfo = [
   {
-    id: 1,
+    id: uuidv4(),
     school: "Arizona State University",
     degree: "Bachelor's Degree in Chemistry",
     startTime: "2018-07-22",
     endTime: "2019-10-22",
   },
   {
-    id: 2,
+    id: uuidv4(),
     school: "Arizona State University",
     degree: "Bachelor's Degree in Chemistry",
     startTime: "2018-07-22",

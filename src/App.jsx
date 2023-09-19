@@ -1,26 +1,29 @@
 import TopInfoSection from "./components/TopInfoSection/TopInfoSection";
 import "./App.css";
-import { useHasSubmit } from "./context/hasSubmitContext";
+import { HasSubmitContext } from "./context/hasSubmitContext";
 import SideInfoSection from "./components/SideInfoSection/SideInfoSection";
 import MainInfoSection from "./components/MainInfoSection/MainInfoSection";
+import { useState } from "react";
 
 function App() {
-  const { hasSubmit, setHasSubmit, HasSubmitContext } = useHasSubmit();
+  const [ hasSubmit, setHasSubmit] = useState(false)
 
-  function onPreviewButtonClick(){
-    setHasSubmit(!hasSubmit)
+  function onPreviewButtonClick() {
+    setHasSubmit(!hasSubmit);
   }
 
   return (
     <div className="App">
       <HasSubmitContext.Provider value={hasSubmit}>
-        <TopInfoSection hasSubmit={hasSubmit} />
-        <SideInfoSection hasSubmit={hasSubmit} />
-        <MainInfoSection hasSubmit={hasSubmit} />
+        <TopInfoSection />
+        <SideInfoSection />
+        <MainInfoSection />
       </HasSubmitContext.Provider>
       <div className="buttonContainer">
-        <button className="previewButton" onClick={onPreviewButtonClick}>Preview</button>
-        <button className="submitButton">Submit</button>
+        <button className="previewButton" >
+          Preview
+        </button>
+        <button className="submitButton" onClick={onPreviewButtonClick}>Submit</button>
       </div>
     </div>
   );

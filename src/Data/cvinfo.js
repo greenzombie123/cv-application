@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const workInfoList = [
   {
-    id:0,
+    id:uuidv4(),
     startTime: "2018-07-22",
     endTime: "2019-10-22",
     company: "ABC Company",
@@ -11,7 +13,7 @@ export const workInfoList = [
     ],
   },
   {
-    id:1,
+    id:uuidv4(),
     startTime: "2018-07-22",
     endTime: "2019-10-22",
     company: "ABC Company",

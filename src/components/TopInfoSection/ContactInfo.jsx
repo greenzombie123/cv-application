@@ -1,12 +1,11 @@
 import Input from "../UtilityComponents/Input";
 import "./ContactInfo.css";
 import { useContext } from "react";
-import { useHasSubmit } from "../../context/hasSubmitContext";
+import { HasSubmitContext } from "../../context/hasSubmitContext";
 
 function ContactInfo({ phoneNumber, email, address, socialMedia, onChange }) {
-  const {HasSubmitContext} = useHasSubmit()
-    const hasSubmit = useContext(HasSubmitContext)
-  
+  const hasSubmit = useContext(HasSubmitContext);
+
   return (
     <ul className="contactInfo">
       <li>

@@ -1,12 +1,11 @@
 import { useSkillList } from "../../../hooks/useSkillList";
-import { useHasSubmit } from "../../../context/hasSubmitContext";
+import { HasSubmitContext } from "../../../context/hasSubmitContext";
 import { useContext } from "react";
 import './SkillList.css'
 
 function SkillList() {
   const { skillList, onInputChange, addItemToList, deleteItemFromList } =
     useSkillList();
-  const { HasSubmitContext } = useHasSubmit();
   const hasSubmit = useContext(HasSubmitContext);
 
   if (hasSubmit) {

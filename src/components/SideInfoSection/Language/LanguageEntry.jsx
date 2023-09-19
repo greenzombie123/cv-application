@@ -1,9 +1,8 @@
 import LevelButtons from "./LevelButtons";
 import { useContext } from "react";
-import { useHasSubmit } from "../../../context/hasSubmitContext";
+import { HasSubmitContext } from "../../../context/hasSubmitContext";
 
 function LanguageEntry({ language, level, onClick, onChange, children}) {
-  const { HasSubmitContext } = useHasSubmit();
   const hasSubmit = useContext(HasSubmitContext);
 
   if(hasSubmit){

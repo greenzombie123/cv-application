@@ -2,11 +2,10 @@ import "./ProfilePicture.css";
 import { useProfilePicture } from "../../../hooks/useProfilePicture";
 import blankPic from "../../../assets/blank.webp";
 import { useContext } from "react";
-import { useHasSubmit } from "../../../context/hasSubmitContext";
+import { HasSubmitContext } from "../../../context/hasSubmitContext";
 
 function ProfilePicture() {
   const { profilePicture, addPicture, deletePicture } = useProfilePicture();
-  const { HasSubmitContext } = useHasSubmit();
   const hasSubmit = useContext(HasSubmitContext);
 
   
