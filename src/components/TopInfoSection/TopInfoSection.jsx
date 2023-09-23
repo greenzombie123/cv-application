@@ -2,12 +2,12 @@ import { useState } from "react";
 import "./Top.css"
 import ContactInfo from "./ContactInfo";
 import Name from "./Name";
+import { nameInfo } from "../../Data/cvinfo";
+import { contactInfo as ci } from "../../Data/cvinfo";
 
 function TopInfoSection() {
-    // const [name, setName] = useState("Alvin Hart")
-    // const [contactInfo, setContactInfo] = useState({phoneNumber:1231321, email:"ggg@hhh", socialMedia:"ggg.twitter", address:"Phoenix, AZ"}) 
-    const [name, setName] = useState("")
-    const [contactInfo, setContactInfo] = useState({phoneNumber:'', email:"", socialMedia:"", address:""}) 
+    const [name, setName] = useState(nameInfo)
+    const [contactInfo, setContactInfo] = useState(ci) 
 
     function onNameChange(e){
         setName(e.target.value)

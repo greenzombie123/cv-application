@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { academicInfo } from "../Data/academicinfo";
+import { academicInfo } from "../Data/cvinfo";
 
 export const useSchoolInfoList = () => {
   const [schoolInfoList, setSchoolInfoList] = useState(academicInfo);
