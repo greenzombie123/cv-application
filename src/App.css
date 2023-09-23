@@ -85,7 +85,7 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-area: buttons;
   justify-content: center;
   padding: 10px 20px;
-  background-color: #d0e3f3;
+  background-color: #e2f2ff69;
   gap: 10px;
   margin-top: 20px;
   height: 70px;

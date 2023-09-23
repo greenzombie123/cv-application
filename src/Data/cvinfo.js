@@ -31,14 +31,14 @@ export const academicInfo = [
     school: "Arizona State University",
     degree: "Bachelor's Degree in Chemistry",
     startTime: "2015-07-22",
-    endTime: "2019-5-22",
+    endTime: "2019-05-22",
   },
   {
     id: uuidv4(),
     school: "California State University",
     degree: "Bachelor's Degree in Physics",
     startTime: "2016-07-22",
-    endTime: "2020-5-22",
+    endTime: "2020-05-22",
   },
 ];
 

@@ -10,6 +10,7 @@ function SchoolInfo({
   endTime,
   onInputChange,
   onDeleleButtonClick,
+  noDeleteButton,
 }) {
   const hasSubmit = useContext(HasSubmitContext);
 
@@ -24,9 +25,14 @@ function SchoolInfo({
   } else
     return (
       <li className="schoolInfo">
-        <button className="schoolInfo_deleteButton" onClick={onDeleleButtonClick}>
-          x
-        </button>
+        {!noDeleteButton ? (
+          <button
+            className="schoolInfo_deleteButton"
+            onClick={onDeleleButtonClick}
+          >
+            x
+          </button>
+        ): <div></div>}
         <input
           className="schoolInfo_input"
           value={school}

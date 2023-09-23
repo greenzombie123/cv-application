@@ -19,6 +19,7 @@ function AcademicSection() {
             {...ai}
             onInputChange={onInputChange(ai.id)}
             onDeleleButtonClick={deleteSchoolInfo(ai.id)}
+            noDeleteButton={schoolInfoList.length === 1}
           />
         ))}
       </ul>

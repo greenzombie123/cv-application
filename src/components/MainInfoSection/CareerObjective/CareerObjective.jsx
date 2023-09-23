@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useContext } from "react";
 import { HasSubmitContext } from "../../../context/hasSubmitContext";
-import { objectiveInfo } from "../../../Data/ObjectiveInfo";
+import { objectiveInfo } from "../../../Data/cvinfo";
 import "./CareerObjective.css";
 import { useResizeTextarea } from "../../../hooks/useResizeTextArea";
 import { useEffect } from "react";
