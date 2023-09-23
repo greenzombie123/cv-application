@@ -15,7 +15,7 @@ function SkillList() {
         <ul className="skillList">
           {skillList.map((skill) => (
             <li className="skillList_item" key={skill.id}>
-              <p>{skill.skill}</p>
+              <p className="skillList_previewText">{skill.skill}</p>
             </li>
           ))}
         </ul>

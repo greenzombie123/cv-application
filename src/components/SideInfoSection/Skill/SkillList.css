@@ -31,3 +31,10 @@
   position: relative;
   margin-bottom: 5px;
 }
+
+.skillList_previewText {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word;
+}

@@ -35,7 +35,7 @@ function WorkSection() {
               <p className="workSection_Time">{formatDate(workInfo.startTime, workInfo.endTime)}</p>
               <ul className="workSection_achievementList">
                 {workInfo.workAchievementList.map((WorkAchievement) => (
-                  <li className="workSection_achievementList_item" key={WorkAchievement.id}>{WorkAchievement.text}</li>
+                  <li className="achievementList_item_previewText" key={WorkAchievement.id}>{WorkAchievement.text}</li>
                 ))}
               </ul>
             </li>

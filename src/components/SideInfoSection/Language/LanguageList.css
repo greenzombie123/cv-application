@@ -9,7 +9,14 @@
   margin-bottom: 5px;
 }
 
-.languageEntry:has(input){
+.languageEntry_previewText {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.languageEntry:has(input) {
   padding-left: 15px;
 }
 
@@ -52,10 +59,10 @@
   line-height: 1;
 }
 
-.levelButton_highlight{
-    background-color: greenyellow;
+.levelButton_highlight {
+  background-color: greenyellow;
 }
 
-.languageList_addButton{
+.languageList_addButton {
   margin-left: 15px;
 }

@@ -9,7 +9,7 @@ function LanguageEntry({ language, level, onClick, onChange, children}) {
     return (
       <li className="languageEntry">
       <div className="languageEntry_top">
-        <p>{language}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{level}</p>
+        <p className="languageEntry_previewText">{language}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;{level}</p>
       </div>
     </li>
     )
