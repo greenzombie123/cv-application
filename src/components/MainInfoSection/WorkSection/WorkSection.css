@@ -22,8 +22,8 @@
 }
 
 .achievementList_item_previewText {
-  display: table;
+  /* display: table;
   table-layout: fixed;
   width: 100%;
-  word-wrap: break-word;
+  word-wrap: break-word; */
 }
