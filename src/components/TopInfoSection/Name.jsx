@@ -8,7 +8,7 @@ function Name({name, onChange}){
     
     return (
         <div className="name">
-            {hasSubmit ? <p>{name}</p> : <Input value={name} onChange={onChange}/>}
+            {hasSubmit ? <p>{name || "Name"}</p> : <Input value={name} onChange={onChange} placeholder="Name"/>}
         </div>
     )
 }

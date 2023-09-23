@@ -20,10 +20,10 @@ function App() {
         <MainInfoSection />
       </HasSubmitContext.Provider>
       <div className="buttonContainer">
-        <button className="previewButton" >
+        <button className="previewButton" onClick={onPreviewButtonClick}>
           Preview
         </button>
-        <button className="submitButton" onClick={onPreviewButtonClick}>Submit</button>
+        <button className="submitButton">Submit</button>
       </div>
     </div>
   );

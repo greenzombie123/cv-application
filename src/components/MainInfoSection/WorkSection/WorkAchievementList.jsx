@@ -26,7 +26,7 @@ function WorkAchievementList({
             />
           </li>
         ))}
-        <AddButton text="Add Achievement" onClick={onAddAchievementClick} />
+        <AddButton text="Add" onClick={onAddAchievementClick} />
       </ul>
     </>
   );

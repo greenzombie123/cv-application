@@ -23,7 +23,7 @@ function AcademicSection() {
         ))}
       </ul>
       {!hasSubmit && (
-        <button className="academicList_addButton" onClick={addNewSchoolInfo}>Add School Entry</button>
+        <button className="academicList_addButton" onClick={addNewSchoolInfo}>Add Another School</button>
       )}
     </div>
   );

@@ -82,7 +82,7 @@ function WorkSection() {
             );
           })}
           <li>
-            <button className="workSection_button" onClick={addNewWorkInfo}>Add</button>
+            <button className="workSection_button" onClick={addNewWorkInfo}>Add Another Company</button>
           </li>
         </ul>
       </div>

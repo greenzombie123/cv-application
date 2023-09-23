@@ -21,7 +21,7 @@ function ContactInfo({ phoneNumber, email, address, socialMedia, onChange }) {
             type="tel"
             value={phoneNumber}
             placeholder="Enter your phone number"
-            pattern={"[0-9]{3}-[0-9]{3}-[0-9]{4}"}
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             onChange={onChange}
           />
         )}
@@ -51,7 +51,7 @@ function ContactInfo({ phoneNumber, email, address, socialMedia, onChange }) {
             <p>Enter your address</p>
           )
         ) : (
-          <Input id="address" value={address} onChange={onChange} />
+          <Input id="address" value={address} onChange={onChange} placeholder="Enter your address"/>
         )}
       </li>
       <li>
@@ -62,7 +62,7 @@ function ContactInfo({ phoneNumber, email, address, socialMedia, onChange }) {
             <p>Enter your social media</p>
           )
         ) : (
-          <Input id="socialmedia" value={socialMedia} onChange={onChange} />
+          <Input id="socialmedia" value={socialMedia} onChange={onChange} placeholder="Enter you social media"/>
         )}
       </li>
     </ul>

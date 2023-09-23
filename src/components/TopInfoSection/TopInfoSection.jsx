@@ -4,9 +4,11 @@ import ContactInfo from "./ContactInfo";
 import Name from "./Name";
 
 function TopInfoSection() {
-    const [name, setName] = useState("Alvin Hart")
-    const [contactInfo, setContactInfo] = useState({phoneNumber:1231321, email:"ggg@hhh", socialMedia:"ggg.twitter", address:"Phoenix, AZ"}) 
-    
+    // const [name, setName] = useState("Alvin Hart")
+    // const [contactInfo, setContactInfo] = useState({phoneNumber:1231321, email:"ggg@hhh", socialMedia:"ggg.twitter", address:"Phoenix, AZ"}) 
+    const [name, setName] = useState("")
+    const [contactInfo, setContactInfo] = useState({phoneNumber:'', email:"", socialMedia:"", address:""}) 
+
     function onNameChange(e){
         setName(e.target.value)
     }
